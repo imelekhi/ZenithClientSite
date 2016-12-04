@@ -1,0 +1,12 @@
+<div *ngIf="activity">
+  <p>Activity ID: {{activity.activityId}}</p>
+  <p>Description: {{activity.activityDescription}}</p>
+  <p>Date Created: {{activity.creationDate}}</p>
+
+  <div>
+    <p><label>Activity ID: </label><input [(ngModel)]="activity.activityId" placeholder="activityId"></p>
+    <p><label>Description: </label><input [(ngModel)]="activity.activityDescription" placeholder="activityDescription"></p>
+    <p><label>Date Created: </label><input [(ngModel)]="activity.creationDate" placeholder="creationDate"></p>
+  </div>
+  <button (click)="goBack()">Back</button>&nbsp;&nbsp;&nbsp;&nbsp;<button (click)="save()">Save</button>
+</div>

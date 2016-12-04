@@ -1,0 +1,66 @@
+<!--
+<div *ngFor="let e of (events | groupBy)">
+  {{ e}}
+</div>
+-->
+<button (click)="previous()">Previous</button>
+<button (click)="next()">Next</button>
+<table *ngIf="events" border="1">
+  <thead>
+    <tr>     
+      <th>From Date</th>
+      <th>To Date</th>
+      <th>Activity</th>
+      <!--
+       <th>Event ID</th>
+      <th>User Name</th>     
+      <th>Creation Date</th>
+      <th>Is Active</th>
+      <th></th>
+      <th></th>
+      -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let e of events; let i=index;">
+      
+      <td>{{e.fromDate}}</td>
+      <td>{{e.toDate}}</td>
+      <td>{{e.activity.activityDescription}}</td>
+      <!--
+      <td>{{e.userName}}</td>
+      <td>{{e.eventId}}</td>      
+      <td>{{e.creationDate}}</td>
+      <td>{{e.isActive}}</td>
+      <td><button class="edit" (click)="gotoEdit(e)">Edit</button></td>
+      <td><button class="delete" (click)="delete(e); $event.stopPropagation()">Delete</button></td> 
+      --> 
+    </tr>
+  </tbody>
+</table>
+
+<p><label>User Name: </label><input [(ngModel)]="user.UserName" placeholder=""></p>
+<p><label>Password: </label><input [(ngModel)]="user.Password" placeholder=""></p>
+<p><label>Remember Me: </label><input type="checkbox" [(ngModel)]="user.RememberMe" placeholder=""></p>
+<button (click)="login()">Login</button>
+<p>{{loginResponse.succeeded}}</p>
+<p>{{roleResponse.confirmed}}</p>
+<p>{{authorized}}</p>
+
+<!--
+<div>
+  <p>New Event</p>
+  <p><label>From Date: </label><input [(ngModel)]="newEvent.fromDate" placeholder="fromDate"></p>
+  <p><label>To Date: </label><input [(ngModel)]="newEvent.toDate" placeholder="toDate"></p>
+  <p><label>User Name: </label><input [(ngModel)]="newEvent.userName" placeholder="userName"></p>
+  <p><label>Activity: </label>
+  <select [(ngModel)]="newEvent.activity">
+    <option *ngFor="let a of activities" [value]="a">{{a.activityDescription}}</option>
+  </select>
+  <p><label>Is Active: </label><input [(ngModel)]="newEvent.isActive" placeholder="isActive"></p>
+  <button (click)="add(newEvent);">
+    Add
+  </button>
+  <p>{{test123}}</p>
+</div>
+-->

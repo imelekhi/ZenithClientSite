@@ -1,0 +1,34 @@
+<table *ngIf="activities" border="1">
+  <thead>
+    <tr>
+      <th>Activity ID</th>
+      <th>Description</th>
+      <th>Creation Date</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let a of activities; let i=index;" (click)="onSelect(a)">
+      <td>{{a.activityId}}</td>
+      <td>{{a.activityDescription}}</td>
+      <td>{{a.creationDate}}</td>
+      <td><button class="edit" (click)="gotoEdit(a)">Edit</button></td>
+      <td><button class="delete" (click)="delete(a); $event.stopPropagation()">Delete</button></td>      
+    </tr>
+  </tbody>
+</table>
+<!--
+<div *ngIf="selected">
+  <h2>
+    {{selected.activityId}} {{selected.activityDescription}} is the selected Activity.
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+-->
+<div>
+  <p><label>New Activity: </label><input [(ngModel)]="newActivity.activityDescription" placeholder="activityDescription"></p>
+  <button (click)="add(newActivity);">
+    Add
+  </button>
+</div>

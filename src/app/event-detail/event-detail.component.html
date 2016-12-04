@@ -1,0 +1,20 @@
+<div *ngIf="event">
+  <p>Event ID: {{event.eventId}}</p>
+  <p>From Date: {{event.fromDate}}</p>
+  <p>To Date: {{event.toDate}}</p>
+  <p>User Name: {{event.userName}}</p>
+  <p>Activity: {{event.activity.activityDescription}}</p>
+  <p>Creation Date: {{event.creationDate}}</p>
+  <p>Is Active: {{event.isActive}}</p>
+
+  <div>
+    <p><label>Event ID: </label><input [(ngModel)]="event.eventId" placeholder="eventId"></p>
+    <p><label>From Date: </label><input [(ngModel)]="event.fromDate" placeholder="fromDate"></p>
+    <p><label>To Date: </label><input [(ngModel)]="event.toDate" placeholder="toDate"></p>
+    <p><label>User Name: </label><input [(ngModel)]="event.userName" placeholder="userName"></p>
+    <p><label>Activity: </label><input [(ngModel)]="event.activity.activityDescription" placeholder="activity"></p>
+    <p><label>Date Created: </label><input [(ngModel)]="event.creationDate" placeholder="creationDate"></p>
+    <p><label>Is Active: </label><input [(ngModel)]="event.isActive" placeholder="isActive"></p>
+  </div>
+  <button (click)="goBack()">Back</button>&nbsp;&nbsp;&nbsp;&nbsp;<button (click)="save()">Save</button>
+</div>
