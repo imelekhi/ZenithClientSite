@@ -1,1 +1,34 @@
+
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: lightskyblue !important;
+    text-align: center;
+}
+
+.schedule {
+    background-color: lightgray;
+    padding: 3px;
+    border-style: solid;
+    border-color: gray;
+    float: center;
+    width:30%; 
+    margin-left:35%; 
+    margin-right:35%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+td {
+    padding: 10px !important;
+    border-style: none !important;
+}
+th {
+    padding: 10px !important;
+    border-style: none !important;
+}
+
+tr {
+    padding: 10px  !important;
+    border-style: none !important;
+}
+

@@ -5,7 +5,8 @@
 -->
 <button (click)="previous()">Previous</button>
 <button (click)="next()">Next</button>
-<table *ngIf="events" border="1">
+<div style="text-align: center;">
+<table class="schedule" *ngIf="events" border="1">
   <thead>
     <tr>     
       <th>From Date</th>
@@ -38,14 +39,11 @@
     </tr>
   </tbody>
 </table>
-
+</div>
 <p><label>User Name: </label><input [(ngModel)]="user.UserName" placeholder=""></p>
 <p><label>Password: </label><input [(ngModel)]="user.Password" placeholder=""></p>
 <p><label>Remember Me: </label><input type="checkbox" [(ngModel)]="user.RememberMe" placeholder=""></p>
 <button (click)="login()">Login</button>
-<p>{{loginResponse.succeeded}}</p>
-<p>{{roleResponse.confirmed}}</p>
-<p>{{authorized}}</p>
 
 <!--
 <div>
